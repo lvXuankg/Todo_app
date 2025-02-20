@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
-import { getTodoElement } from "../../helpers/GetTodoElement"; 
+import { getTodoElement } from "../../helpers/TodoElement"; 
 import "./ShowTodoElement.scss";
+import CheckBox from "../../components/CheckBox";
 function ShowTodoElement(){
     const params = useParams();
     // console.log(params.id);
@@ -22,7 +23,7 @@ function ShowTodoElement(){
                         <h3>Việc cần làm: </h3>
                         {list.notes.map((item, index) => (
                             <li key={index} className="todoItem__list--item">
-                                <button className="checkBox"></button>
+                                <CheckBox status={item.status} id={list.id} id_item={item.id}/>
                                 <span>{item.title}</span>
                             </li>
                         ))}

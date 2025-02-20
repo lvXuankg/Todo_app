@@ -2,7 +2,10 @@ import Item from "./Item";
 import "./Item.scss";
 import { GetDate } from "../../helpers/GetDate";
 
+    
+    
 function Home(){
+
     const element = JSON.parse(localStorage.getItem("todo_list"));
     
     return (
