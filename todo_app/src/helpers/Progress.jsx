@@ -13,5 +13,6 @@ export const CountProgress = (list) => {
 
 export const ActiveProgress = (progress) => {
     if(progress.cntDone == progress.cntAll) return "active";
+    else if(progress.cntDone*2 >= progress.cntAll) return "oneTwo";
     return "";
 }
