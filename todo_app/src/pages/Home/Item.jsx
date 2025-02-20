@@ -1,13 +1,13 @@
 
 function Item(props){
-    const {item, index} = props;
+    const {item} = props;
     return (
         <>
             <div className="todo">
                 <div className="todo__avatar">
-                    <span>{index}</span>
+                    <span>{item.title}</span>
                 </div>
-                <span className="todo__title">{item.title}</span>
+                <span className="todo__date">Ngày tạo : {item.dateCreated}</span>
             </div>
         </>
     )

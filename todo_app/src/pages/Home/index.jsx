@@ -1,9 +1,11 @@
 import Item from "./Item";
 import "./Item.scss";
+import { GetDate } from "../../helpers/GetDate";
 const element = [
 {
     id: 1,
     title: "Tiếng anh",
+    dateCreated: "28/02/2005",
     notes: [
         {
             id: 1,
@@ -15,6 +17,7 @@ const element = [
 {
     id: 2,
     title: "Tiếng a",
+    dateCreated: "06/06/2025",
     notes: [
         {
             id: 1,
@@ -26,6 +29,7 @@ const element = [
 {
     id: 3,
     title: "Tiếng b",
+    dateCreated: "07/06/2025",
     notes: [
         {
             id: 1,
@@ -37,6 +41,7 @@ const element = [
 {
     id: 4,
     title: "Tiếng c",
+    dateCreated: "08/06/2025",
     notes: [
         {
             id: 1,
@@ -48,6 +53,7 @@ const element = [
 {
     id: 5,
     title: "Tiếng e",
+    dateCreated: "09/06/2025",
     notes: [
         {
             id: 1,
@@ -59,6 +65,7 @@ const element = [
 {
     id: 6,
     title: "Tiếng f",
+    dateCreated: "10/06/2025",
     notes: [
         {
             id: 1,
@@ -70,6 +77,7 @@ const element = [
 {
     id: 7,
     title: "Tiếng g",
+    dateCreated: "11/06/2025",
     notes: [
         {
             id: 1,
@@ -81,6 +89,7 @@ const element = [
 {
     id: 8,
     title: "Tiếng h",
+    dateCreated: "12/06/2025",
     notes: [
         {
             id: 1,
@@ -91,12 +100,13 @@ const element = [
 },
 ]
 function Home(){
+    console.log(GetDate());
     return (
         <>
             <div className="home">
                 {
                     element.map((item, index) => (
-                        <Item item={item} index={index+1} key={index}/>
+                        <Item item={item} key={index}/>
                     ))
                 }
             </div>
