@@ -11,6 +11,26 @@ const element = [
             id: 1,
             title: "Học từ vựng",
             status: "Done"
+        },
+        {
+            id: 2,
+            title: "a",
+            status: "Done"
+        },
+        {
+            id: 3,
+            title: "b",
+            status: "Pending"
+        },
+        {
+            id: 4,
+            title: "c",
+            status: "Done"
+        },
+        {
+            id: 5,
+            title: "d",
+            status: "Pending"
         }
     ]
 },
@@ -21,8 +41,28 @@ const element = [
     notes: [
         {
             id: 1,
-            title: "Học ngữ pháp",
+            title: "Học từ vựng",
+            status: "Pending"
+        },
+        {
+            id: 2,
+            title: "a",
             status: "Done"
+        },
+        {
+            id: 3,
+            title: "b",
+            status: "Done"
+        },
+        {
+            id: 4,
+            title: "c",
+            status: "Pending"
+        },
+        {
+            id: 5,
+            title: "d",
+            status: "Pending"
         }
     ]
 },
@@ -33,7 +73,27 @@ const element = [
     notes: [
         {
             id: 1,
-            title: "Làm đề",
+            title: "Học từ vựng",
+            status: "Done"
+        },
+        {
+            id: 2,
+            title: "a",
+            status: "Done"
+        },
+        {
+            id: 3,
+            title: "b",
+            status: "Done"
+        },
+        {
+            id: 4,
+            title: "c",
+            status: "Done"
+        },
+        {
+            id: 5,
+            title: "d",
             status: "Done"
         }
     ]
@@ -45,8 +105,28 @@ const element = [
     notes: [
         {
             id: 1,
-            title: "Thi",
-            status: "Done"
+            title: "Học từ vựng",
+            status: "Pending"
+        },
+        {
+            id: 2,
+            title: "a",
+            status: "Pending"
+        },
+        {
+            id: 3,
+            title: "b",
+            status: "Pending"
+        },
+        {
+            id: 4,
+            title: "c",
+            status: "Pending"
+        },
+        {
+            id: 5,
+            title: "d",
+            status: "Pending"
         }
     ]
 },
@@ -58,6 +138,26 @@ const element = [
         {
             id: 1,
             title: "Học từ vựng",
+            status: "Pending"
+        },
+        {
+            id: 2,
+            title: "a",
+            status: "Pending"
+        },
+        {
+            id: 3,
+            title: "b",
+            status: "Pending"
+        },
+        {
+            id: 4,
+            title: "c",
+            status: "Pending"
+        },
+        {
+            id: 5,
+            title: "d",
             status: "Done"
         }
     ]
