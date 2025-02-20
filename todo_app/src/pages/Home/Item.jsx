@@ -1,9 +1,10 @@
 import { CountProgress } from "../../helpers/Progress";
+
 import Progress from "../../components/Progress";
 function Item(props){
-    const {item} = props;
+    const {item, index} = props;
     const ProgressValue = CountProgress(item.notes);
-    console.log(ProgressValue);
+    
     return (
         <>
             <div className="todo">
