@@ -1,0 +1,61 @@
+.ShowTodoItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.todoItem{
+    width: 100%;
+    max-width: 700px;
+    min-width: 200px;
+    &__title{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        
+        .inner-title{
+            font-size: 25px;    
+            font-weight: 800;
+        }
+        .inner-response{
+            font-weight: 600;
+            font-size: 22px;
+        }
+    }
+    &__date{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        
+        .inner-title{
+            font-size: 25px;    
+            font-weight: 800;
+        }
+        .inner-response{
+            font-weight: 600;
+            font-size: 19px;
+        }
+    }
+
+    &__list{
+        list-style: none;
+        padding: 0; 
+
+        h3{
+            font-size: 23px;
+            font-weight: 700;
+        }
+
+        &--item{
+            font-size: 19px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 40px;
+            padding: 0 10px;
+        }
+    }
+}
+.checkBox{
+    width: 20px;
+    aspect-ratio: 1;
+    margin-right: 20px;
+}
