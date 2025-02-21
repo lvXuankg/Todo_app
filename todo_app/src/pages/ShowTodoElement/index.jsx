@@ -10,9 +10,7 @@ import DelItem from "../../components/DelItem";
 import { fnDeleteTodoItem } from "../../helpers/TodoListDelete";
 function ShowTodoElement(){
     const params = useParams();
-    // console.log(params.id);
     const list = getTodoElement(params.id);
-    // console.log(list);
     const [isOpen, setIsOpen] = useState(false);
     const [reload, setReload] = useState(1);
     const ReloadPage = () => {
