@@ -18,7 +18,7 @@ function Home(){
         <>
             <div className="home">
                 {
-                    element.map((item, index) => (
+                    (element || []).map((item, index) => (
                         <Item item={item} index={index+1} fnReload = {ReloadPage} key={index}/>
                     ))
                 }
