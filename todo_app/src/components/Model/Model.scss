@@ -94,3 +94,37 @@
         display: inline-block;
     }
 }
+
+@media (max-width: 456px){
+    .ViewDate{
+        span{
+            width: 40%;
+        }
+        &__date{
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: 350px){
+    .ViewInput{
+        flex-wrap: warp;
+        flex-direction: column;
+        span{
+            width: 100%;
+        }
+        input{
+            width: 100%;
+        }
+    }
+    .ViewDate{
+        flex-wrap: warp;
+        flex-direction: column;
+        span{
+            width: 100%;
+        }
+        &__date{
+            width: 100%;
+        }
+    }
+}

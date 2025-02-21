@@ -110,4 +110,18 @@
     }
     
 }
-
+@media (max-width: 992px){
+    .todo{
+        width: calc(100%/3 - 20px);
+    }
+}
+@media (max-width: 576px){
+    .todo{
+        width: calc(100%/2 - 20px);
+    }
+}
+@media (max-width: 456px){
+    .todo{
+        width: 100%;
+    }
+}
