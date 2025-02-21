@@ -25,7 +25,7 @@ function Model({fnReload, isOpen, onClose, name, fnPOST,type}){
     const handleSubmit = (e) => {
         e.preventDefault();
         let titleTodo = e.target.elements.title.value;
-        fnPOST(titleTodo);
+        if(titleTodo) fnPOST(titleTodo);
         fnReload();
         onClose();
     }
