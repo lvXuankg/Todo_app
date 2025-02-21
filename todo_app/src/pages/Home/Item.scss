@@ -15,6 +15,7 @@
     // overflow: hidden;
     transition: all 0.6s;
     cursor: pointer;
+    position: relative;
     
     &__avatar{
         background-color: #FFDEE9;
@@ -40,6 +41,31 @@
         color: #3c3333;
         
     }
+
+    &__delete{
+        position: absolute;
+        right: 9px;
+        top: 9px;
+        background: transparent;
+        border: 0;
+        z-index: 10;
+        opacity: 0;
+        transition: all 2s;
+        visibility: hidden;
+        &-icon{
+            font-size: 30px;
+            color: #4d0116;
+            transition: all 0.6s;
+        }
+
+        &:hover{
+            cursor: pointer;
+            .todo__delete-icon{
+                font-size: 35px;
+            }
+        }
+    }
+
     &:hover{
         border: 1px solid #000;
         .todo__avatar{
@@ -47,6 +73,10 @@
                 font-weight: 900;
                 font-size: 22px;
             }
+        }
+        .todo__delete{
+            opacity: 1;
+            visibility: visible;
         }
         
     }
@@ -80,3 +110,4 @@
     }
     
 }
+

@@ -1,6 +1,8 @@
 import { CountProgress } from "../../helpers/Progress";
 import { handleRedirect } from "../../helpers/Navigate";
 import Progress from "../../components/Progress";
+import TodoListDelete from "../../components/TodoListDelete";
+
 function Item(props){
     const {item, index} = props;
     const ProgressValue = CountProgress(item.notes);
@@ -8,6 +10,7 @@ function Item(props){
     return (
         <>
             <div className="todo" onClick={() => fnRedirect(index)}>
+                <TodoListDelete id={item.id}/>
                 <div className="todo__avatar">
                     <span>{item.title}</span>
                     <div className={`Progress-bar }`}>
