@@ -1,14 +1,12 @@
 import Item from "./Item";
 import "./Item.scss";
-import { GetDate } from "../../helpers/GetDate";
 import { useState } from "react";
 import AddTodoList from "../../components/AddTodoList";
 import Model from "../../components/Model";
+import { addNewTodoElement } from "../../helpers/TodoElement";
+    
 
-    
-    
 function Home(){
-
     const element = JSON.parse(localStorage.getItem("todo_list"));
     const [isOpen, setIsOpen] = useState(false);
     const [reload, setReload] = useState(1);
@@ -25,7 +23,16 @@ function Home(){
                     ))
                 }
                 <AddTodoList fnOpen={() => setIsOpen(true)}/>
-                <Model fnReload = {ReloadPage} isOpen={isOpen} onClose={()=>setIsOpen(false)}/>
+                {isOpen && 
+                    <Model 
+                        fnReload = {ReloadPage} 
+                        isOpen={isOpen} 
+                        onClose={()=>setIsOpen(false) } 
+                        name = "Tạo mới một Todo" 
+                        fnPOST = {(id) => addNewTodoElement(id)} 
+                        type = "AddList"
+                 />
+                }
             </div>
             
             

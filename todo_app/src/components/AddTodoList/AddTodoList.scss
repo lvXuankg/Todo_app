@@ -1,0 +1,22 @@
+// Add Button 
+.addButton {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    min-width: 20px;
+    max-width: 50px;
+    aspect-ratio: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    opacity: 0.5;   
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: all 1s;
+    &:hover{
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        opacity: 1;
+    }
+}
+// End Add Button 

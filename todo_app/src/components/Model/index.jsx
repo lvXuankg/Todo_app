@@ -2,8 +2,7 @@ import "./Model.scss";
 import { GetDate } from "../../helpers/GetDate";
 import { SiTicktick } from "react-icons/si";
 import { useEffect } from "react";
-import { addNewTodoElement } from "../../helpers/TodoElement";
-function Model({fnReload, isOpen, onClose}){
+function Model({fnReload, isOpen, onClose, name, fnPOST,type}){
     if(!isOpen) return null;
 
     useEffect(() => {
@@ -21,12 +20,12 @@ function Model({fnReload, isOpen, onClose}){
         return () => {
             ModelPick.removeEventListener("click", handleClickOutside); 
         };
-    }, []);
+    }, [onClose]);
     
     const handleSubmit = (e) => {
         e.preventDefault();
         let titleTodo = e.target.elements.title.value;
-        addNewTodoElement(titleTodo);
+        fnPOST(titleTodo);
         fnReload();
         onClose();
     }
@@ -35,16 +34,23 @@ function Model({fnReload, isOpen, onClose}){
         <>
             <div className="model" >
                 <div className="model__view">
-                    <h3 className="model__view--title">Tạo mới 1 todo</h3>
+                    <h3 className="model__view--title">{name}</h3>
                     <form onSubmit={handleSubmit}>
                         <div className="ViewInput">
                             <span>Chủ đề : </span>
                             <input name="title"/>
                         </div>
-                        <div className="ViewDate">      
-                            <span>Ngày tạo : </span>
-                            <div className="ViewDate__date">{GetDate()}</div>
-                        </div>
+                        {
+                            type === "AddList" ? (
+                                <div className="ViewDate">      
+                                    <span>Ngày tạo : </span>
+                                    <div className="ViewDate__date">{GetDate()}</div>
+                                 </div>
+                            )   :  (
+                                <></>
+                            )
+                        }
+                        
                         
                         <button type="submit">
                             <SiTicktick/>

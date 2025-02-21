@@ -1,6 +1,5 @@
 import { GrAdd } from "react-icons/gr";
-import { addNewTodoElement } from "../../helpers/TodoElement";
-
+import "./AddTodoList.scss";
 function AddTodoList(props){
     const { fnOpen} = props;
     const handleClick = () => {
