@@ -7,7 +7,7 @@ export const getTodoElement = (id) => {
 export const addNewTodoElement = (title) => {
     const id = uuidv4();
     const date = GetDate();
-    const todo_list = JSON.parse(localStorage.getItem("todo_list"));
+    const todo_list = JSON.parse(localStorage.getItem("todo_list")) || [];
     const new_Todo = {
         id: id,
         title: title,
@@ -23,7 +23,7 @@ export const addNewTodoElement = (title) => {
 export const addNewTodoItem = (id, title) => {
     
     const new_id = uuidv4();
-    const todo_list = JSON.parse(localStorage.getItem("todo_list"));
+    const todo_list = JSON.parse(localStorage.getItem("todo_list")) || [];
     const index = todo_list.findIndex((item) => item.id === id);
     const newData = {
         id: new_id,
